@@ -1,0 +1,12 @@
+.git
+.gradle
+build
+target
+data
+*.db
+*.db-shm
+*.db-wal
+*.log
+.idea
+.vscode
+.DS_Store
