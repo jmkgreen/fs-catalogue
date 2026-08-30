@@ -96,3 +96,5 @@ Focused requirements live under `docs/`:
 * [CLI requirements](docs/cli.md)
 * [Storage and schema notes](docs/storage-schema.md)
 * [Docker and operations](docs/docker.md)
+* [End-user guide](docs/end-user.md)
+* [Development guardrails](docs/development.md)

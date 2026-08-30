@@ -1,0 +1,15 @@
+services:
+  catalog:
+    build: .
+    image: fs-catalogue:latest
+    container_name: fs-catalogue
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+      - ./config:/config:ro
+      - /mnt/tank/media:/mnt/media:ro
+      - /mnt/tank/backups:/mnt/backups:ro
+    environment:
+      CATALOG_CONFIG: /config/catalogue.yml
+      CATALOG_DB: /data/catalogue.db
+    entrypoint: ["sleep", "infinity"]

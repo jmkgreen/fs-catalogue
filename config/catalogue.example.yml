@@ -1,0 +1,4 @@
+database: /data/catalogue.db
+roots:
+  media: /mnt/media
+  backups: /mnt/backups

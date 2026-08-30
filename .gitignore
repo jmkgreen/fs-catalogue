@@ -1,0 +1,10 @@
+.gradle/
+build/
+out/
+*.class
+*.log
+*.db
+*.db-shm
+*.db-wal
+/data/
+/config/catalogue.local.yml
