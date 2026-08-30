@@ -78,6 +78,37 @@ Suggested container paths:
 
 Catalogue roots such as `/mnt/media` and `/mnt/backups` should usually be mounted read-only. The application is designed not to modify indexed files, and read-only mounts provide an extra safety guardrail.
 
+## Published Image
+
+GitHub Actions builds and publishes the Docker image to GitHub Container Registry on pushes to `main` and on version tags that start with `v`.
+
+The image name is based on the GitHub repository:
+
+```plaintext
+ghcr.io/<owner>/<repo>
+```
+
+For this repository, that will normally be:
+
+```plaintext
+ghcr.io/<owner>/fs-catalogue
+```
+
+Published tags include:
+
+* `latest` for the default branch;
+* `main` for pushes to `main`;
+* `sha-<commit>` for each published commit;
+* semantic version tags when pushing tags such as `v0.1.0`.
+
+An end-user who does not want to build locally can use the published image in Compose:
+
+```yaml
+image: ghcr.io/<owner>/fs-catalogue:latest
+```
+
+The package may need to be made public in the GitHub repository's package settings before unauthenticated machines can pull it.
+
 ## Example docker-compose.yml
 
 ```yaml

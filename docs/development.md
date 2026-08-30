@@ -36,8 +36,11 @@ CI performs:
 
 * Java 21 setup;
 * Gradle `check`;
-* Docker image build;
-* GHCR image publish on successful pushes to `main`.
+* Docker image build for pull requests and pushes;
+* GHCR image publish on successful pushes to `main`;
+* GHCR image publish for version tags starting with `v`.
+
+Published images are tagged with `latest` on the default branch, the branch name, a `sha-<commit>` tag, and semantic version tags for releases such as `v0.1.0`.
 
 ## Notes
 
